@@ -7,27 +7,24 @@
 
 int main(void)
 {
-	int num1, num2;
+	int digit1, digit2;
 
-	for (num1 = '0'; num1 < '9'; num1++)
+	for (digit1 = 0; digit1 < 9; digit1++)
 	{
-		for (num2 = '1'; num2 <= '9'; num2++)
+		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
 		{
-			putchar((num1 % 10) + '0');
-			putchar((num2 % 10) + '0');
+			putchar((digit1 % 10) + '0');
+			putchar((digit2 % 10) + '0');
 
-			if (num1 == '8' && num2 == '9')
-			{
-				if (num1 == num2)
-				{
-					continue;
-				}
-			}
-
+			if (digit1 == 8 && digit2 == 9)
+				continue;
+			
 			putchar(',');
 			putchar(' ');
 		}
 	}
+
 	putchar('\n');
+
 	return (0);
 }

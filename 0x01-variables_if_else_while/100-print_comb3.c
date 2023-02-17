@@ -13,14 +13,14 @@ int main(void)
 	{
 		for (num2 = '0'; num2 <= '9'; num2++)
 		{
-			putchar(num1);
-			putchar(num2);
+			putchar((num1 % 10) + '0');
+			putchar((num2 % 10) + '0');
 
 			if (num1 == '9' && num2 == '9')
 			{
 				break;
 			}
-			
+
 			putchar(',');
 			putchar(' ');
 		}

@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+/**
+ * main - print hexidecimal values
+ * Return: always success (0)
+ */
+
+int main(void)
+{
+	int number;
+	char letter;
+
+	for (number = '0'; number <= '9'; number++)
+	{
+		putchar(letter);
+	}
+
+	for (letter = 'a'; letter <= 'f'; letter++)
+	{
+		putchar(number);
+	}
+	putchar('\n');
+	return (0);
+}

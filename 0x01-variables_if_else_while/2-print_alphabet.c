@@ -7,8 +7,11 @@
 
 int main(void)
 {
-	char alphab[26] = "abcdefghijklmnopqrstuvwxyz";
+	char ch;
 
-	putchar(alphab[26]);
-	return (0);
+	for (ch = 'a'; ch <= 'z'; ch++)
+	{
+		putchar(ch);
+		putchar ('\n');
+	}
 }

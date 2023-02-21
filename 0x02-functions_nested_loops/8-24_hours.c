@@ -7,22 +7,18 @@
 
 void jack_bauer(void)
 {
-	int h = 0;
-	int m; /*don't initialize until used in loop*/
+	int h;
+	int m;
 
-	while (h < 24)
+	for (h = 0; h < 24; h++)
 	{
-		_putchar(h);
-		_putchar(':');
-		h++;
-
-		m = 0;
-
-		while (m < 60)
+		for (m = 0; m < 60; h++)
 		{
-			_putchar(m);
+			_putchar(h + '0');
+			_putchar(':');
+			_putchar(m + '0');
 			_putchar('\n');
-			m++;
 		}
 	}
+
 }

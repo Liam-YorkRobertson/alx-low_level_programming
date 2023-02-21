@@ -16,7 +16,7 @@ void times_table(void)
 
 		while (v <= 9)
 		{
-			int s = h * v;
+			char s = h * v;
 
 			_putchar(s + '0');
 			_putchar(',');

@@ -15,6 +15,5 @@ int print_last_digit(int r)
 	{
 		k = -k;
 	}
-	return (k);
-	return (k);
+	return (k + k);
 }

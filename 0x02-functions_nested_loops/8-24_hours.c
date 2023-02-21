@@ -14,9 +14,14 @@ void jack_bauer(void)
 	{
 		for (m = 0; m < 60; h++)
 		{
-			_putchar(h + '0');
+			_putchar(h / 10 + '0'); /**
+						*e.g. 21/10 is 2,because 21/10
+						*is 2.1, but is int so no decimal
+						*/
+			_putchar(h % 10 + '0'); /* % 10 is used to get last digit */
 			_putchar(':');
-			_putchar(m + '0');
+			_putchar(m / 10 + '0'); /*same principle as above*/
+			_putchar(m % 10 + '0'); /*same principle as above*/
 			_putchar('\n');
 		}
 	}

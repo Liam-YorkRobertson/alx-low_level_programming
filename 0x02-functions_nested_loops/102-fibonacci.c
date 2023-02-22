@@ -15,7 +15,7 @@ int main(void)
 	{
 		if (i == 0) /*first position*/
 		{
-			printf("%ld, ", f);
+			printf("%ld", f);
 		}
 		else if (i == 1) /*second position*/
 		{

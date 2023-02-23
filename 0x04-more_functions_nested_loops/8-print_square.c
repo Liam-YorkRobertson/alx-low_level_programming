@@ -1,9 +1,9 @@
 #include "main.h"
 
-/*
- *print_square - prints a square made of #
- *@size: size of square
- *Return: none (void)
+/**
+ * print_square - creates a square made of #
+ * @size: size of square
+ * Return: none (void)
  */
 
 void print_square(int size)

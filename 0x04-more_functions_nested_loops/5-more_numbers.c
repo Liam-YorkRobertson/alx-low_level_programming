@@ -7,18 +7,21 @@
 
 void more_numbers(void)
 {
-	int i = 0;
+	int row = 0;
 
-	while (1 <= 9)
+	while (row <= 9)
 	{
-		char c = '0';
+		int c = 0;
 
-		for (c = '0'; c <= 14; c++)
+		for (c = 0; c <= 14; c++)
 		{
-			_putchar(c);
+			if (c >= 10)
+			{
+				_putchar((c / 10) + '0'); /*this adds a 1 before next character*/
+			}
+			_putchar((c % 10) + '0'); /*converts int to char*/
 		}
 		_putchar('\n');
-		i++;
+		row++;
 	}
-	_putchar('\n');
 }

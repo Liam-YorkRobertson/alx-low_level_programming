@@ -19,12 +19,12 @@ void print_diagonal(int n)
 	{
 		for (i = 1; i <= n; i++)
 		{
-			for (sp = 1; sp < n; sp++) /*for spaces before \*/
+			for (sp = 1; sp < i; sp++) /*for spaces before \*/
 			{
 				_putchar(' ');
 			}
 			_putchar('\\');
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }

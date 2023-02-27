@@ -15,7 +15,7 @@ void print_rev(char *s)
 	{
 		a++;
 	}
-	for (b = a - 1; b >= 0; b++) /*prints in reverse*/
+	for (b = a - 1; b >= 0; b--) /*-1 makes it start from behind*/
 	{
 		_putchar(s[b]);
 	}

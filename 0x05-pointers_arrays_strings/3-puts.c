@@ -13,6 +13,7 @@ void _puts(char *str)
 	while (str[a] != '\0') /*while the value of the string isn't end point*/
 	{
 		_putchar(str[a]); /* print each character */
+		a++;
 	}
 	_putchar('\n');
 }

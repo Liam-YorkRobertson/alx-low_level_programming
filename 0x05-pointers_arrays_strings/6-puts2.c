@@ -18,7 +18,7 @@ void puts2(char *str)
 		}
 		else
 		{
-			break;
+			continue; /*break stops the whole execution*/
 		}
 	}
 	_putchar('\n');

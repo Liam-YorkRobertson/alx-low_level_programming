@@ -21,7 +21,7 @@ char *_strcat(char *dest, char *src)
 	{
 		slen++; /*gets len of src*/
 	}
-	for (i = 0; i < slen; i++) /*i < slen stops appending when slen done*/
+	for (i = 0; i <= slen; i++) /*i <= slen stops appending when slen don*/
 	{
 		dest[dlen + 1] = src[i]; /**dlen + i, because we want to add
 		*src to the end of dest, if it wasn't + i, then would overwrite dest

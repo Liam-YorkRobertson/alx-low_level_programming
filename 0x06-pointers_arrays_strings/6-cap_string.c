@@ -30,7 +30,9 @@ char *cap_string(char *n)
 				n[ind - 1] == '(' ||
 				n[ind - 1] == ')' ||
 				n[ind - 1] == '{' ||
-				n[ind - 1] == '}') /*-1, because before word*/
+				n[ind - 1] == '}' ||
+				ind == 0) /*-1, because before word*/
+				/*ind == 0 there, because we don't want NULL*/
 		{
 			n[ind] = n[ind] - 32; /*capitalizes*/
 		}

@@ -9,11 +9,18 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
+	/*using while loops instead of for loops (errors)*/
 	int i;
 
-	for (i = 0; i < n && src[i] != '\0'; i++) /*we want specific number, so n*/
+	i = 0;
+	while (i < n)
 	{
 		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
 	}
 	return (dest);
 }

@@ -9,18 +9,23 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int a = 0;
-	int b = 0;
+	int dlen = 0;
+	int slen = 0;
+	int i = 0;
 
-	while (dest[a] != '\0')
+	for (i = 0; dlen != '\0'; i++)
 	{
-		a++;
+		dlen++; /*gets len of dest*/
 	}
-	while (src[b] != '\0')
+	for (i = 0; slen != '\0'; i++)
 	{
-		dest[a] = src[b];
-		b++;
-		a++;
+		slen++; /*gets len of src*/
 	}
-	return (dest + '\0');
+	for (i = 0; i < slen; i++) /*i < slen stops appending when slen done*/
+	{
+		dest[dlen + 1] = src[i]; /**dlen + i, because we want to add
+		*src to the end of dest, if it wasn't + i, then would overwrite dest
+		*/
+	}
+	return (dest);
 }

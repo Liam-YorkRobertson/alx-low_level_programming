@@ -31,5 +31,6 @@ char *_strncat(char *dest, char *src, int n)
 		*src to the end of dest, if it wasn't + i, then would overwrite dest
 		*/
 	}
-	return (dest + '\0');
+	dest[dlen + i] = '\0';
+	return (dest);
 }

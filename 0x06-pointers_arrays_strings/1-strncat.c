@@ -10,26 +10,25 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int dlen = 0;
-	int slen = 0;
-	int i;
+	/*using for loops caused errors, so had to find another way*/
+	
+	int a;
+	int b;
 
-	for (i = 0; dest[i] != '\0'; i++)
+	a = 0;
+	while (dest[a] != '\0')
 	{
-		dlen++; /*gets len of dest*/
+		a++; /*gets len of dest*/
 	}
-	for (i = 0; src[i] != '\0'; i++)
+	b = 0;
+	while (src[b] != '\0' && b < n)/*appends as long as b < n (bytes we choose)
+                                *isbi < n, because we count from 0, E.g. if
+                                *n = 5, then 5 iterations is from b=0 to b=4
+                                */
 	{
-		slen++; /*gets len of src*/
-	}
-	for (i = 0; i < n; i++) /*appends as long as i < n (bytes we choose)
-				*is i < n, because we count from 0, E.g. if
-				*n = 5, then 5 iterations is from i=0 to i=4
-				*/
-	{
-		dest[dlen + i] = src[i]; /**dlen + i, because we want to add
-		*src to the end of dest, if it wasn't + i, then would overwrite dest
-		*/
+		dest[a] = src[b];
+		a++;
+		b++;
 	}
 	return (dest);
 }

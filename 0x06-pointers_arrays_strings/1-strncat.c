@@ -11,7 +11,7 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	/*using for loops caused errors, so had to find another way*/
-	
+
 	int a;
 	int b;
 
@@ -22,9 +22,9 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	b = 0;
 	while (src[b] != '\0' && b < n)/*appends as long as b < n (bytes we choose)
-                                *isbi < n, because we count from 0, E.g. if
-                                *n = 5, then 5 iterations is from b=0 to b=4
-                                */
+					*isbi < n, because we count from 0, E.g. if
+					*n = 5, then 5 iterations is from b=0 to b=4
+					*/
 	{
 		dest[a] = src[b];
 		a++;

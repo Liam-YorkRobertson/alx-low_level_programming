@@ -21,7 +21,7 @@ char *rot13(char *n)
 			if (n[i] == let[j])
 			{
 				n[i] = rot[j];
-				continue;
+				break;/*immediate exit of this loop*/
 			}
 		}
 	}

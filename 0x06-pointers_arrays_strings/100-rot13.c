@@ -3,7 +3,7 @@
 /**
  *rot13 - encodes a string using rot13 cipher
  *@n: chars of string to be encoded
- *return: n (char)
+ *Return: n (char)
  */
 
 char *rot13(char *n)

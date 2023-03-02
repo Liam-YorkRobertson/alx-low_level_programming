@@ -16,7 +16,7 @@ void print_number(int n)
 		_putchar('-');
 		num = -n; /*is now positive*/
 	}
-	if (num / 10 != 0)
+	if (num / 10 != 0)/*if not / 10 , then run through function again*/
 	{
 		print_number(num / 10);
 	}

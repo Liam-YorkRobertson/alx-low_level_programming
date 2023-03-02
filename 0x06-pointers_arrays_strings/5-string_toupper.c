@@ -2,22 +2,22 @@
 
 /**
  *string_toupper - converts string to uppercase
- *@n: string to be converted
+ *@str: string to be converted
  *Return: char (n)
  */
 
-char *string_toupper(char *n)
+char *string_toupper(char *str)
 {
 	int i;
 
 	i = 0;
-	while (n[i] != '\0')
+	while (str[i])
 	{
-		if (n[i] >= 'a' && n[i] <= 'z')
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			n[i] = n[i] - 32;
+			str[i] = str[i] - 32;
 			i++;
 		}
 	}
-	return (n);
+	return (str);
 }

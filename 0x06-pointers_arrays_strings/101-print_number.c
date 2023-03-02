@@ -8,7 +8,7 @@
 
 void print_number(int n)
 {
-	int num;
+	unsigned int num;
 
 	num = n;
 	if (n < 0) /*print sign, but we don't want to use it in calculations*/

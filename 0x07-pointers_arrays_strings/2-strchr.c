@@ -11,7 +11,7 @@ char *_strchr(char *s, char c)
 {
 	int i;
 
-	for (i = 0; s[i] != '\0'; i++) /*don't want to deal with null char*/
+	for (i = 0; s[i] >= '\0'; i++) /*>= NULL, because lowest ascii char*/
 	{
 		if (s[i] == c)
 		{

@@ -3,7 +3,7 @@
 /**
  *_memset - fills memory with a constant byte
  *@s: memory area pointed to
- *@n: amount of bytes we want to change
+ *@n: amount of bytes to be change
  *@b: constant byte
  *Return: s (changed array)
  */

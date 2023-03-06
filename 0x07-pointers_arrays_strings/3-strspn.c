@@ -10,14 +10,15 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	int i = 0;
-	int j = 0;
+	int n = 0;
 
 	for (; s[i] >= '\0'; i++)/*>= NULL, because is lowest ascii char*/
 	{
 		if (s[i] == accept[i])
 		{
-			j = j + 1; /*counts how manay times =*/
+			n++;
+			continue;
 		}
 	}
-	return (j);
+	return (n);
 }

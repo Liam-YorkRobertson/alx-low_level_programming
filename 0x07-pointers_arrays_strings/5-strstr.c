@@ -10,18 +10,17 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int i;
-	/*my solution caused segmentation fault, so had to find another*/
-	for (i = 0; haystack[i] >= '\0'; i++)
-	{	
-		while (haystack[i] == needle[i] && needle[i] != '\0')
+
+	for (; haystack[0]; haystack++)
+	{
+		for (i = 0; haystack[i] == needle[i]; i++)
 		{
-			haystack++;
-			needle++;
+			;
 		}
 		if (needle[i] == '\0')
 		{
 			return (haystack);
 		}
 	}
-	return ('\0');
+	return (0);
 }

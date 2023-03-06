@@ -12,14 +12,14 @@ unsigned int _strspn(char *s, char *accept)
 	int i;
 	unsigned int n = 0;
 
-	while (*s)
+	while (*s) /*dereferences s*/
 	{
-		for (i = 0; accept[i]; i++)
+		for (i = 0; accept[i]; i++) /*bytes of accept*/
 		{
 			if (*s  == accept[i])
 			{
-				n++;
-				break;
+				n++; /*increases the bytes count*/
+				break; /*breaks out of loop*/
 			}
 			else if (accept[i + 1] == '\0')
 			{

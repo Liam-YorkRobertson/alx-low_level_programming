@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- *print_chessboard: funciotn that prints a chess board
+ *print_chessboard - function that prints a chess board
  *@a: array
  *Return: none (void)
  */
 
 void print_chessboard(char (*a)[8])
 {
+	/*similar to notes made see them*/
 	int i;
 	int j;
 
@@ -17,5 +18,6 @@ void print_chessboard(char (*a)[8])
 		{
 			_putchar(a[i][j]);
 		}
+		_putchar('\n');
 	}
 }

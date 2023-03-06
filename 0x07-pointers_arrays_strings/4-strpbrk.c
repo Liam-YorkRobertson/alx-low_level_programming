@@ -9,18 +9,19 @@
 
 char *_strpbrk(char *s, char *accept)
 {
+	/*similar to previous task*/
 	int i;
 
-	while (*s)
+	while (*s) /*dereferenced*/
 	{
-		for (i = 0; accept[i]; i++)
+		for (i = 0; accept[i]; i++) /*run loop for each i char*/
 		{
 			if (*s == accept[i])
 			{
-				return (s);
+				return (s); /*return equal char*/
 			}
 		}
-		s++;
+		s++; /*run loop for next s char*/
 	}
 	return ('\0');
 }

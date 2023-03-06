@@ -9,13 +9,14 @@
 
 char *_strstr(char *haystack, char *needle)
 {
+	/*my method gave segmentation fault, so had to find another*/
 	int i;
 
-	for (; haystack[0]; haystack++)
+	for (; haystack[0]; haystack++) /*increments and goes through chars*/
 	{
-		for (i = 0; haystack[i] == needle[i]; i++)
+		for (i = 0; haystack[i] == needle[i]; i++)/*looking for ==*/
 		{
-			;
+			; /*empty for loop used to search for element in arr*/
 		}
 		if (needle[i] == '\0')
 		{

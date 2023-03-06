@@ -11,16 +11,13 @@ char *_strstr(char *haystack, char *needle)
 {
 	/*my solution caused segmentation fault, so had to find another*/
 	for (; *haystack != '\0'; haystack++)
-	{
-		char *h = haystack;
-		char *n = needle
-		
-		while (*h == *n && *n != '\0')
+	{	
+		while (*haystack == *needle && *needle != '\0')
 		{
-			h++;
-			n++;
+			haystack++;
+			needle++;
 		}
-		if (*n == '\0')
+		if (*needle == '\0')
 		{
 			return (haystack);
 		}

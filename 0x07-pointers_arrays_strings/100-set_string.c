@@ -8,6 +8,6 @@
  */
 
 void set_string(char **s, char *to)
-{
+{/*similar to notes, see notes*/
 	*s = to;
 }

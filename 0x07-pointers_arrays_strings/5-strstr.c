@@ -9,15 +9,16 @@
 
 char *_strstr(char *haystack, char *needle)
 {
+	int i;
 	/*my solution caused segmentation fault, so had to find another*/
-	for (; *haystack != '\0'; haystack++)
+	for (i = 0; haystack[i] >= '\0'; i++)
 	{	
-		while (*haystack == *needle && *needle != '\0')
+		while (haystack[i] == needle[i] && needle[i] != '\0')
 		{
 			haystack++;
 			needle++;
 		}
-		if (*needle == '\0')
+		if (needle[i] == '\0')
 		{
 			return (haystack);
 		}

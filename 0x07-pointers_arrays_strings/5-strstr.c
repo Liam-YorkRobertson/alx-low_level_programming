@@ -9,18 +9,18 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
-
-	while (*haystack)
+	/*my solution caused segmentation fault, so had to find another*/
+	for (; *haystack != '\0'; haystack ++)
 	{
-		for (i = 0; needle[i]; i++)
+		while (*haystack == *needle && *needle != '\0')
 		{
-			if (*haystack == needle[i] && needle[i] != '\0')
-			{
-				return (haystack);
-			}
+			haystack++;
+			needle++;
 		}
-		haystack++;
+		if (*needle == '\0')
+		{
+			return(haystack);
+		}
 	}
 	return ('\0');
 }

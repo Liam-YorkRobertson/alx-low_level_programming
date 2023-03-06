@@ -9,7 +9,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i = 0;
+	unsigned int i = 0;
 	int n = 0;
 
 	for (; s[i] >= '\0'; i++)/*>= NULL, because is lowest ascii char*/

@@ -9,9 +9,9 @@
 void _print_rev_recursion(char *s)
 {
 	if (*s)
-	{
-		_putchar(*s - 1);
+	{/*will loop until last char, and then putchar*/
 		_print_rev_recursion(s + 1);
+		_putchar(*s);
 	}
 	else
 	{

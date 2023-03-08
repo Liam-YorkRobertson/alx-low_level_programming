@@ -12,9 +12,5 @@ void _print_rev_recursion(char *s)
 	{/*will loop until last char, and then putchar*/
 		_print_rev_recursion(s + 1);
 		_putchar(*s);
-	}
-	else
-	{
-		_putchar('\n');
-	}
+	} /*no new line*/
 }

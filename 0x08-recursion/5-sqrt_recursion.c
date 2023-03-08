@@ -4,7 +4,7 @@
 /**
  *_find_root - finds square root of number
  *@i: is the same as n (see _sqrt funciton)
- *@n: number that increases from one to find natural square root
+ *@j: number that increases from one to find natural square root
  *Return: square root
  */
 

@@ -14,11 +14,8 @@ int main(int argc, char *argv[])
 	int num1;
 	int num2;
 	int sum;
-	int i;
 
-	for (i = 1; i < argc; i++)
-	{
-		if ((*argv[i] < '0' || *argv[i] > '9'))
+		if ((*argv[1] < '0' || *argv[1] > '9') || (*argv[2] < '0' || *argv[2] > '9'))
 		{
 			printf("Error\n");
 			return (1);
@@ -34,6 +31,5 @@ int main(int argc, char *argv[])
 		{
 				printf("0\n");
 		}
-	}
 	return (0);
 }

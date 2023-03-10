@@ -11,23 +11,29 @@
 
 int main(int argc, char *argv[])
 {
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[2]);
+	int num1;
+	int num2;
 	int sum;
-	
-	if (!(num1 > 0 || num1 < 9) || (num2 > 0 || num2 < 9))
+	int i;
+
+	for (i = 1; i < argc; i++)
 	{
-		printf("Error\n");
-		return (1);
-	}
-	else if (argc == 3)
-	{
-		sum = num1 + num2;
-		printf("%d\n", sum);
-	}
-	else if (argc == 1)
-	{
-		printf("0\n");
+		if ((*argv[i] < '0' || *argv[i] > '9'))
+		{
+			printf("Error\n");
+			return (1);
+		}
+		else if (argc == 3)
+		{
+			num1 = atoi(argv[1]);
+			num2 = atoi(argv[2]);
+			sum = num1 + num2;
+			printf("%d\n", sum);
+		}
+		else if (argc == 1)
+		{
+				printf("0\n");
+		}
 	}
 	return (0);
 }

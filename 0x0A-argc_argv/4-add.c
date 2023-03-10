@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	long unsigned int n;
+	unsigned long int n;
 	int sum = 0;
 	char *a;
 
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 				if (a[n] < 48 || a[n] > 57)
 				{/*checks if char is digit or not*/
 					printf("Error\n");
-					return(0);
+					return (0);
 				}
 			}
 			sum = sum + atoi(a);

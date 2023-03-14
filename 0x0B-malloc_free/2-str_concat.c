@@ -35,7 +35,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 	j = 0; /*j re-initialized*/
-	while (k > l)
+	while (k < l)
 	{
 		if (k <= i)
 		{

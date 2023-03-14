@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- *createa_array - creates an array
+ *create_array - creates an array
  *@size: size of memory for array
  *@c: chars of array
  *Return: address of arr

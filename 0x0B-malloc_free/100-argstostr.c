@@ -28,7 +28,7 @@ char *argstostr(int ac, char **av)
 		i++;
 	}
 
-	m = malloc((sizeof(char) * l) + 1); /*get required mem*/
+	m = malloc((sizeof(char) * l) + ac + 1); /*get required mem*/
 	i = 0;
 	while (av[i]) /*concatenating strings*/
 	{

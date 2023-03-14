@@ -18,9 +18,15 @@ char *_strdup(char *str)
 		i++;
 	}
 
-	dup = malloc(sizeof(char) * i); /*allocate mem*/
+	if (str == NULL) /*had to split original funciton to this (seg fault)*/
+	{
+		return (NULL);
+	}
 
-	if (str == NULL || dup == NULL)
+	dup = malloc((sizeof(char) * i) + 1); /*allocate mem, had error so +1*/
+	/*prob had to add +1 for a null character*/
+
+	if (dup == NULL)
 	{
 		return (NULL);
 	}

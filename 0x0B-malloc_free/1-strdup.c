@@ -13,14 +13,14 @@ char *_strdup(char *str)
 	unsigned int i = 1;
 	unsigned int j = 0;
 
-	while (str[i]) /*incremetn i for each char of str*/
-	{
-		i++;
-	}
-
 	if (str == NULL) /*had to split original funciton to this (seg fault)*/
 	{
 		return (NULL);
+	}
+
+	while (str[i]) /*increment i for each char of str*/
+	{
+		i++;
 	}
 
 	dup = malloc((sizeof(char) * i) + 1); /*allocate mem, had error so +1*/

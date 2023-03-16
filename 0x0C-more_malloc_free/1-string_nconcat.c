@@ -27,12 +27,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		;
 	}
-	if (n > is2) /*use entire s2 if n >=, using amount of char,not chars*/
+	if (n >= is2) /*use entire s2 if n >=, using amount of char,not chars*/
 	{
 		n = is2;
 	}
 	tot = is1 + n; /*total length of new string*/
-	strout = malloc(sizeof(char) * tot + 1); /*alloc mem for new str*/
+	strout = malloc((sizeof(char) * tot) + 1); /*alloc mem for new str*/
 	/*+1 above is for null char*/
 	if (strout == NULL)
 	{
@@ -49,6 +49,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			strout[i] = s2[i - is1];
 		}
 	}
-	strout = '\0';
+	strout[i] = '\0';
 	return (strout);
 }

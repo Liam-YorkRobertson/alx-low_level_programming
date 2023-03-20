@@ -17,8 +17,8 @@ void print_dog(struct dog *d)
 	if (d->name == NULL)
 	{
 		d->name = "(nil)";
-	}/*age is a float, so don't compare like rest*/
-	else if (d->owner == NULL)
+	} /*age is a float, so don't compare like rest*/
+	if (d->owner == NULL) /*can't use else if*/
 	{
 		d->owner = "(nil)";
 	}

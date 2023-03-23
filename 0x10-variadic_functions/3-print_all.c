@@ -4,7 +4,7 @@
 
 /**
  *print_all - prints anything
- *@format: types of args passed
+ *@format: types of argumentss passed
  *Return: none (void)
  */
 

@@ -3,7 +3,7 @@
 
 /**
  *sum_them_all - gets sum of all arguments
- *@n: first argument of variadic function
+ *@n: number of parameters passes
  *Return: sum
  */
 

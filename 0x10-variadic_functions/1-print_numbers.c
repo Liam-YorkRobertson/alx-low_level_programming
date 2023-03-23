@@ -5,7 +5,7 @@
 /**
  *print_numbers - prints numbers
  *@separator:  string (comma) between numbers
- *@n: first argument of variadic functions
+ *@n: number of strings passed
  *Return: none (void)
  */
 

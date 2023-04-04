@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- *pop_listint tmp;
+ *pop_listint - deletes head returns its data;
  *@head: pointer to address of list
  *Return: data of deleted head
  */
@@ -10,6 +10,11 @@ int pop_listint(listint_t **head)
 {
 	listint_t *tmp;
 	int data;
+
+	if (*head == NULL)
+	{
+		return (0);
+	}
 	/*have to use brackets, because of double pointer*/
 	tmp = *head; /*head is assigned to tmp as we intend on removing it*/
 	data = (*head)->n; /*data of head assigned to variable*/

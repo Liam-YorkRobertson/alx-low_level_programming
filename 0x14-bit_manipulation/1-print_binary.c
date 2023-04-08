@@ -2,7 +2,7 @@
 
 /**
  *print_binary - prints binary from decimal
- *@n - integer to be changed
+ *@n: integer to be changed
  *Return: none (void)
  */
 

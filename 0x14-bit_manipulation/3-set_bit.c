@@ -19,5 +19,5 @@ int set_bit(unsigned long int *n, unsigned int index)
 	swapBitAtIndex = 1 << index; /*shifts 1 to left until index point*/
 	*n = *n | swapBitAtIndex; /*OR will always be 1 here*/
 
-	return (*n);
+	return (1);
 }

@@ -5,10 +5,10 @@
 #include <fcntl.h>
 
 /**
- *
- *
- *
- *
+ *read_textfile - reads a text file and prints to posix output
+ *@filename: file we are reading from
+ *@letters: number of characters we want to read
+ *Return: w (succcess), 0 (failure)
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -42,5 +42,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	free(buffer);
 	close(fp);
-	return(w);
+	return (w);
 }

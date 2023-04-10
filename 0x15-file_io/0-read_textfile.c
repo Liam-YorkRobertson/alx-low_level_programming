@@ -13,7 +13,7 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fp;
+	ssize_t fp; /*got a bunch of errrors using FILE*/
 	char *buffer;
 	ssize_t r;
 	ssize_t w;
@@ -23,16 +23,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	fp = fopen(filename, "O_RDONLY");
+	fp = open(filename, O_RDONLY);
 
-	if (fp == NULL) /*fp cannot be opened or read*/
+	if (fp == -1) /*fp cannot be opened or read*/
 	{
 		return (0);
 	}
 
-	buffer = malloc(sizeof(letters));
-	r = read(fp, buffer, char *, letters);
-	w = write(STDOUT_FILENO, buffer, char *, r);
+	buffer = malloc(sizeof(char) * letters);
+	r = read(fp, buffer, letters);
+	w = write(STDOUT_FILENO, buffer, r);
 
 	if (w == -1 || w != r)
 	{

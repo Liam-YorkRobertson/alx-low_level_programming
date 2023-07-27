@@ -26,3 +26,7 @@ fclean: clean oclean
 re: fclean all
 
 .PHONY: all clean oclean fclean re
+
+ifeq ($(wildcard m.h),)
+    $(error "m.h" header file not found)
+endif

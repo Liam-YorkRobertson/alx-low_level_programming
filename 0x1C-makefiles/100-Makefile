@@ -8,8 +8,13 @@ NAME = school
 
 RM = rm -f
 
-all: m.h $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+all: $(NAME)
+
+$(NAME): m.h $(OBJ)
+	$(CC) -o $(NAME) $(OBJ)
+
+$(OBJ): %.o: %.c
+	$(CC) -c $< -o $@
 
 clean:
 	$(RM) $(NAME) *~
